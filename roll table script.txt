@@ -1,0 +1,9 @@
+-- Edit the "roll" section inbetween { } to create the table
+set roll to {"Short Sword", "Long Sword", "Battle Axe", "Short Sword +2", "Short Sword +2", "Short Sword +2", "Long Sword", "Short Sword +2"} as list
+set the list_count to the count of roll
+set pick to random number from 1 to list_count
+set generated_choice to item pick of roll
+set theDialogText to "Would you like to roll?"
+display dialog theDialogText buttons {"No", "Yes"} default button "Yes" cancel button "No"
+if true then display dialog generated_choice buttons {"Okay"}
+-- Once complete - you can export it as an application so that you can just use it as you would any other app on your mac without having to run Script Editor every time
